@@ -1,81 +1,149 @@
 
-# React Native Post Card
+## Badges
 
-A brief description of what this project does and who it's for
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+
+# react-native-socialcard
+
+Advanced Social-Card for React Native Community. It is a React Native component that allows you to create a card for User Post with a Posttitle, description, image, and interaction buttons such as like, repost, retwitte and comment. It also comes with built-in Comment Section for per User post. Fully Dynamic and Responsive.
+
+## Features
+
+- Advanced Post Card
+- Built-in Comment Section
+- Built-in Fetch and Post Hooks for connection between cards and server
+- Have Data-Points for Data Analysis of User Engagement
+- Typescript Support 
+- Cross platform
+
 
 
 ## Demo
 
-![Alt Text](https://im4.ezgif.com/tmp/ezgif-4-616dccb75b.gif)
+![Alt Text](https://raw.githubusercontent.com/deepaktiwari09/react-native-SocialCards/master/assets/Demo.gif)
 
 
+## Installation
+
+```bash
+  npm install @deepaktiwari09/react-native-socialcard
+```
+    
 ## Usage/Examples
 
 ```javascript
-import { PostCard, UserData, AuthorData } from '@deepaktiwari09/Postcard'
+import { PostCard } from '@deepaktiwari09/react-native-socialcard'
 
 export default function App() {
-  const [authorData, setauthorData] = useState<AuthorPostPropType[]>(AuthorData);
   return (
-    <ScrollView>
-      {authorData.map((authorData, index) => {
-        return (
-          <PostCard
-            key={index}
-            CardmarginStyle={{ top: 10, bottom: 10, left: 10, right: 10 }}
-            AuthorData={authorData}
-            UserData={UserData}
-            onLikeClicked={(currentuserId, postId, authorId) => {
-              setauthorData(AuthorData.map((item, index) => {
-                if (item.authorId === authorId && item.authorPostId === postId) {
-                  item.authorPostLikeCount += 1;
-                  return item;
-                }
-                else {
-                  return item;
-                }
-
-              }))
-            }}
-            onRepostClicked={(currentuserId, postId, authorId) => {
-              setauthorData(AuthorData.map((item, index) => {
-                if (item.authorId === authorId && item.authorPostId === postId) {
-                  item.authorPostRepostCount += 1;
-                  return item;
-                }
-                else {
-                  return item;
-                }
-
-              }))
-            }}
-            onCommentLikeClicked={() => { }}
-            onNewCommentDone={(comment, currentuserId, postId, autherId) => {
-              setauthorData(AuthorData.map((item, index) => {
-                if (item.authorId === autherId && item.authorPostId === postId) {
-                  item.authorPostComment.unshift({
-                    CommentId: item.authorPostComment.length,
-                    CommentLikeCount: 0,
-                    CommentDescription: comment,
-                    CommentDate: new Date().toLocaleString(),
-                    CommentUserImage: UserData.currentUserImage,
-                    CommenterUserName: UserData.currentUserName,
-                  })
-                  return item;
-                }
-                else {
-                  return item;
-                }
-
-              }))
-            }}
+      <PostCard
+            CardmarginStyle={}
+            AuthorData={}
+            UserData={}
+            onLikeClicked={}
+            onRepostClicked={}
+            onCommentLikeClicked={}
+            onNewCommentDone={}
 
           />
-        )
-      }
-      )}
-    </ScrollView>
-  );
+    )
 }
 ```
+
+#### PostCardPropTypes
+
+```typescript
+type PostCardPropType = {
+    CardmarginStyle: marginProp,
+    AuthorData: AuthorPostPropType,
+    UserData: UserPropType,
+    onLikeClicked: (
+        currentuserId: number,
+        postId: number,
+        authorId: number) => void,
+    onRepostClicked: (
+        currentuserId: number,
+        postId: number,
+        authorId: number) => void,
+    onCommentLikeClicked: (
+        currentuserId: number,
+        postId: number,
+        commentId: number,
+        authorId: number) => void,
+    onNewCommentDone: (
+        comment: string,
+        currentuserId: number,
+        postId: number,
+        authorId: number) => void,
+}
+```
+
+#### UserPropType
+
+```typescript
+type UserPropType = {
+    currentUserId: number,
+    currentUserName: string,
+    currentUserImage: string,
+}
+```
+
+#### AuthorPostPropType
+
+```typescript
+type AuthorPostPropType = {
+    authorId: number,
+    authorImage: string,
+    authorPostId: number,
+    authorPostTitle: string,
+    authorPostDescription: string,
+    authorPostLikeCount: number,
+    authorPostCommentCount: number,
+    authorPostRepostCount: number,
+    authorFollowCount: string,
+    authorPostComment: {
+        CommentId: number,
+        CommentLikeCount: number,
+        CommentDescription: string,
+        CommentDate: string,
+        CommentUserImage: string,
+        CommenterUserName: string,
+    }[],
+}
+```
+
+#### marginProp
+
+```typescript
+type marginProp = { 
+    top: number, 
+    bottom: number, 
+    left: number, 
+    right: number 
+}
+```
+## Roadmap
+
+Release 0.1.0
+
+* [ ] Adding React Hooks for fetching data and posting data to backend server.
+
+* [ ] Adding Redux-toolkit support for local state-management
+
+* [ ] Adding Animations.
+
+Release 0.2.0
+
+* [ ]  Adding Datapoints to Post for Backend Server to run Data Analysis of Post engagement and User Experience Analysis.
+## Issue and Feedback
+
+have Any Issue Report is Here https://github.com/deepaktiwari09/react-native-SocialCards/issues
+
+If you have any feedback, please reach out to us at deepaktiwari3020@gmail.com
+
+
+## Authors
+
+[Deepak Tiwari](https://github.com/deepaktiwari09)
 
