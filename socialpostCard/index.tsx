@@ -56,7 +56,7 @@ export type PostCardPropType = {
         authorId: number) => void,
 }
 
-export default function PostCard({
+export default function SocialPostCard({
     CardmarginStyle,
     AuthorData,
     UserData,

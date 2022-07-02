@@ -33,11 +33,11 @@ Advanced Social-Card for React Native Community. It is a React Native component 
 ## Usage/Examples
 
 ```javascript
-import { PostCard } from '@deepaktiwari09/react-native-socialcard'
+import { SocialPostCard } from '@deepaktiwari09/react-native-socialcard'
 
 export default function App() {
   return (
-      <PostCard
+      <SocialPostCard
             CardmarginStyle={}
             AuthorData={}
             UserData={}
@@ -48,6 +48,54 @@ export default function App() {
 
           />
     )
+}
+```
+### Import dummyData and Props
+
+```javascript
+import { UserData, AuthorData } from "@deepaktiwari09/react-native-socialcard/socialpostCard/dummyData";
+import { marginProp, AuthorPostPropType, UserPropType, PostCardPropType } from '@deepaktiwari09/react-native-socialcard/socialpostCard';
+```
+#### marginProp
+
+```typescript
+type marginProp = { 
+    top: number, 
+    bottom: number, 
+    left: number, 
+    right: number 
+}
+```
+#### AuthorPostPropType
+
+```typescript
+type AuthorPostPropType = {
+    authorId: number,
+    authorImage: string,
+    authorPostId: number,
+    authorPostTitle: string,
+    authorPostDescription: string,
+    authorPostLikeCount: number,
+    authorPostCommentCount: number,
+    authorPostRepostCount: number,
+    authorFollowCount: string,
+    authorPostComment: {
+        CommentId: number,
+        CommentLikeCount: number,
+        CommentDescription: string,
+        CommentDate: string,
+        CommentUserImage: string,
+        CommenterUserName: string,
+    }[],
+}
+```
+#### UserPropType
+
+```typescript
+type UserPropType = {
+    currentUserId: number,
+    currentUserName: string,
+    currentUserImage: string,
 }
 ```
 
@@ -79,50 +127,11 @@ type PostCardPropType = {
 }
 ```
 
-#### UserPropType
 
-```typescript
-type UserPropType = {
-    currentUserId: number,
-    currentUserName: string,
-    currentUserImage: string,
-}
-```
 
-#### AuthorPostPropType
 
-```typescript
-type AuthorPostPropType = {
-    authorId: number,
-    authorImage: string,
-    authorPostId: number,
-    authorPostTitle: string,
-    authorPostDescription: string,
-    authorPostLikeCount: number,
-    authorPostCommentCount: number,
-    authorPostRepostCount: number,
-    authorFollowCount: string,
-    authorPostComment: {
-        CommentId: number,
-        CommentLikeCount: number,
-        CommentDescription: string,
-        CommentDate: string,
-        CommentUserImage: string,
-        CommenterUserName: string,
-    }[],
-}
-```
 
-#### marginProp
 
-```typescript
-type marginProp = { 
-    top: number, 
-    bottom: number, 
-    left: number, 
-    right: number 
-}
-```
 ## Roadmap
 
 Release 0.1.0
