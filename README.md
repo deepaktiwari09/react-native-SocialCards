@@ -33,7 +33,7 @@ Advanced Social-Card for React Native Community. It is a React Native component 
 ## Usage/Examples
 
 ```javascript
-import { SocialPostCard } from '@deepaktiwari09/react-native-socialcard'
+import { SocialPostCard } from '@tiwariux/rn-socialcard'
 
 export default function App() {
   return (
@@ -53,8 +53,8 @@ export default function App() {
 ### Import dummyData and Props
 
 ```javascript
-import { UserData, AuthorData } from "@deepaktiwari09/react-native-socialcard/socialpostCard/dummyData";
-import { marginProp, AuthorPostPropType, UserPropType, PostCardPropType } from '@deepaktiwari09/react-native-socialcard/socialpostCard';
+import { UserData, AuthorData } from "@tiwariux/rn-socialcard/socialpostCard/dummyData";
+import { marginProp, AuthorPostPropType, UserPropType, PostCardPropType } from '@tiwariux/rn-socialcard/socialpostCard';
 ```
 #### marginProp
 
@@ -154,5 +154,6 @@ If you have any feedback, please reach out to us at deepaktiwari3020@gmail.com
 
 ## Authors
 
-[Deepak Tiwari](https://github.com/deepaktiwari09)
+[Github](https://github.com/deepaktiwari09)  [Linkdin](https://www.linkedin.com/in/deepak-tiwari-431470205/)
+
 

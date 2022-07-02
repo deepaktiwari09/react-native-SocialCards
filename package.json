@@ -1,6 +1,6 @@
 {
-  "name": "@deepaktiwari09/react-native-socialcard",
-  "version": "0.0.1",
+  "name": "@tiwariux/rn-socialcard",
+  "version": "0.0.2",
   "dependencies": {
     "@types/react": "^18.0.14",
     "@types/react-native": "^0.69.1",
@@ -24,10 +24,11 @@
   },
   "description": "Advanced Social-Card for React Native Community. It is a React Native component that allows you to create a card for User Post with a Posttitle, description, image, and interaction buttons such as like, repost, retwitte and comment. It also comes with built-in Comment Section for per User post. Fully Dynamic and Responsive.",
   "main": "index.js",
-  "author": "deepaktiwari09 <deepaktiwari3020@gmail.com>",
+  "author": "tiwariux <deepaktiwari3020@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/deepaktiwari09/react-native-SocialCards",
+  "homepage": "rnsocialcard.tiwariux.com",
   "keywords": [
+    "tiwariux",
     "react-native",
     "social-card",
     "social-cards",
