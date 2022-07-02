@@ -1,0 +1,29 @@
+{
+  "name": "@deepaktiwari09/rnpostcards",
+  "version": "0.0.5",
+  "dependencies": {
+    "@types/react": "^18.0.14",
+    "@types/react-native": "^0.69.1",
+    "react": "18.0.0",
+    "react-native": "0.69.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "react-native-raw-bottom-sheet": "^2.2.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "react-test-renderer": "18.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "description": "simple card ",
+  "main": "index.js",
+  "author": "deepaktiwari09 <deepaktiwari3020@gmail.com>",
+  "license": "MIT"
+}
