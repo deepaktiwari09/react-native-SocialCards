@@ -27,7 +27,7 @@ Advanced Social-Card for React Native Community. It is a React Native component 
 ## Installation
 
 ```bash
-  npm install @deepaktiwari09/react-native-socialcard
+  npm install @tiwariux/rn-socialcard
 ```
     
 ## Usage/Examples
